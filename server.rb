@@ -32,7 +32,7 @@ end
 
 post "/users" do
  new_user = MultiJson.load(request.body.read)
- @user = User.new( new_post )
+ @user = User.new( new_user )
  if @user.save
  json @user
  else
