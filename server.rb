@@ -48,6 +48,11 @@ post '/users' do
  end
 end
 
+get '/users/:id/towers' do
+  @towers = Tower.where(user_id: params[:id])
+  json @towers
+end
+
 # add new tower (save game)
 post '/users/:id/towers' do
   new_tower = MultiJson.load(request.body.read)
