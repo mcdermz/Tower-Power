@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 require './models/user'
+require './models/tower'
 require 'sinatra/json'
 
 set :public_folder, 'public'
@@ -35,12 +36,25 @@ get '/users' do
   json @users
 end
 
+# add new user
 post '/users' do
  new_user = MultiJson.load(request.body.read)
  @user = User.new( new_user )
  if @user.save
- json @user
+   json @user
  else
- no_data!
+   no_data!
  end
+end
+
+# add new tower (save game)
+post '/users/:id/towers' do
+  new_tower = MultiJson.load(request.body.read)
+  new_tower[:user_id] = params['id']
+  @tower = Tower.new( new_tower )
+  if @tower.save
+    json @tower
+  else
+    no_data!
+  end
 end
