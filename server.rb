@@ -10,6 +10,7 @@ set :database, {adapter: 'postgresql', database: 'towerpower'}
 mime_type :json, "application/json"
 
 get '/' do
+  content_type :html
   send_file File.join(settings.public_folder, 'index.html')
 end
 
@@ -45,6 +46,11 @@ post '/users' do
  else
    no_data!
  end
+end
+
+get '/users/:id/towers' do
+  @towers = Tower.where(user_id: params[:id])
+  json @towers
 end
 
 # add new tower (save game)
