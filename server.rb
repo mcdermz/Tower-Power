@@ -30,7 +30,12 @@ helpers do
  end
 end
 
-post "/users" do
+get '/users' do
+  @users = User.all
+  json @users
+end
+
+post '/users' do
  new_user = MultiJson.load(request.body.read)
  @user = User.new( new_user )
  if @user.save
