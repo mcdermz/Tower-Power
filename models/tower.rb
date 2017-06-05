@@ -1,5 +1,5 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 
-class UserTowers < ActiveRecord::Base
+class Tower < ActiveRecord::Base
 end
