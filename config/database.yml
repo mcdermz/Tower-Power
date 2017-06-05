@@ -3,7 +3,7 @@ development:
  encoding: unicode
  database: towerpower
  host: localhost
- username: postgres
+ username:
  password:
  port: 5432
 test:
@@ -12,7 +12,7 @@ test:
  database: test
  pool: 5
  host: localhost
- username: postgres
+ username:
  password:
  port: 5432
 production:
@@ -21,6 +21,6 @@ production:
  database: production
  pool: 5
  host: localhost
- username: postgres
+ username:
  password:
  port: 5432
