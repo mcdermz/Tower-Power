@@ -9,18 +9,18 @@
 </nav>
 <div class="container">
     <div class="row">
-        <h2 class="btn btn-primary btn-block new-game">New Game</h2>
-        <h2 class="btn btn-primary btn-block load-game">Load Game</h2>
-        <h2 class="btn btn-primary btn-block instructions">Instructions</h2>
-        <div ng-show="$ctrl." class="instructions-dropdown ng-cloak">
-            <p>Welcome to Tower Power! The objective of this game is to reach a five star raiting for your tower. You gain stars by increacing your tower population and tower revenue. Each floor of your tower supports 12 spaces to add units.</p>
-            <p>Tower Population increases by building residential units.One unit takes up 3 floor spaces, so plan ahead! Each unit costs $10 to build and increases population by 5 people. Be carful though, each residential unit costs money to maintain.</p>
+        <button class="btn btn-primary btn-block new-game">New Game</button>
+        <button class="btn btn-primary btn-block load-game">Load Game</button>
+        <button class="btn btn-primary btn-block instructions" ng-click="$ctrl.rulesShow = !$ctrl.rulesShow">Instructions</button>
+        <div ng-show="$ctrl.rulesShow" class="instructions-dropdown">
+            <p class="instructions-text">Welcome to Tower Power! The objective of this game is to reach a five star raiting for your tower. You gain stars by increacing your tower population and tower revenue. Each floor of your tower supports 12 spaces to add units.</p>
+            <p class="instructions-text">Tower Population increases by building residential units.One unit takes up 3 floor spaces, so plan ahead! Each unit costs $10 to build and increases population by 5 people. Be carful though, each residential unit costs money to maintain.</p>
             <p>Tower Revenue increases by building commercial units. commercial units take up 4 spaces per floor. Each unit generates $1 in revenue per minute and costs $10 to build. Unlike residential units, commercial units to not have a maintenance fee.
             </p>
-            <p> The star raiting system works as follows: You start with one star, an empty floor, no units, and small inheritance from your long lost twice removed late granny from Timbuktu. This small fortune happens to be just enough to start your tower
+            <p class="instructions-text"> The star raiting system works as follows: You start with one star, an empty floor, no units, and small inheritance from your long lost twice removed late granny from Timbuktu. This small fortune happens to be just enough to start your tower
                 empire. To gain a second star raiting for your tower you must reach 25 people. Each subsequent star is double the previous star. So, to reach 3 stars you need t oreach 50 people, to reach 4 you need 100 people, and to reach 5 stars you
                 must reach 200 people.</p>
-            <p>Simple right? Well, with each floor you add to your building the maintenance fee goes up:</p>
+            <p class="instructions-text">Simple right? Well, with each floor you add to your building the maintenance fee goes up:</p>
             <ul>
                 <li>1 floor=$1/min</li>
                 <li>2 floors=$2/min</li>
