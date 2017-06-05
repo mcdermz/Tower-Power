@@ -50,8 +50,9 @@ end
 # add new tower (save game)
 post '/users/:id/towers' do
   new_tower = MultiJson.load(request.body.read)
-  new_tower[:user_id] = params['id']
+  new_tower[:user_id] = params[:id]
   @tower = Tower.new( new_tower )
+
   if @tower.save
     json @tower
   else
