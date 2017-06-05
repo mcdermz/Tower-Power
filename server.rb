@@ -10,6 +10,7 @@ set :database, {adapter: 'postgresql', database: 'towerpower'}
 mime_type :json, "application/json"
 
 get '/' do
+  content_type :html
   send_file File.join(settings.public_folder, 'index.html')
 end
 
