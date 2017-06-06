@@ -5,5 +5,7 @@
       templateUrl: './game/floors/emptyfloors.html'
     })
 
-    function controller () {}
+    function controller () {
+      
+    }
 })()
