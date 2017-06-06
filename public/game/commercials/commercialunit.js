@@ -5,5 +5,10 @@
       templateUrl: './game/commercial/commercialunit.html'
     })
 
-    function controller () {}
+    function controller () {
+      // delete
+      // move
+
+      
+    }
 })()
