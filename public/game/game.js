@@ -1,6 +1,6 @@
 (function () {
   angular.module('app')
-    .component('towerpower', {
+    .component('game', {
       controller: controller,
       templateUrl: './game/game.html'
     })
