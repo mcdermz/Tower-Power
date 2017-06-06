@@ -1,0 +1,21 @@
+.gamewindow {
+  width: 100%;
+  height: 100vh;
+}
+
+.floor {
+  width: auto;
+  height: auto;
+}
+
+/*.unitspace {
+  height: 50px;
+  width: 50px;
+}*/
+
+#rspace {
+  background-color: green;
+}
+#cspace {
+  background-color: blue;
+}
