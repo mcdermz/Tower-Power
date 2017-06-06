@@ -9,6 +9,11 @@ set :public_folder, 'public'
 set :database, {adapter: 'postgresql', database: 'towerpower'}
 mime_type :json, "application/json"
 
+also_reload '/public/index.html'
+after_reload do
+  puts 'reloaded'
+end
+
 get '/' do
   content_type :html
   send_file File.join(settings.public_folder, 'index.html')

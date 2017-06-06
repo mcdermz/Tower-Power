@@ -1,25 +1,23 @@
 (function() {
     'use strict';
 
-    angular.module("app", [])
+    angular.module("app")
         .component('login', {
             controller: controller,
             templateUrl: '../login/login.html'
 
         })
 
+    controller.$inject = ['loginService']
+    function controller(loginService) {
+      const vm = this
+      vm.slideForm = function(){
+         $('form').animate({
+           height: "toggle",
+           opacity: "toggle"
+         }, "slow");
+      }
 
-    function controller() {
-        const vm = this
-        vm.slideForm = function(){
-           $('form').animate({
-             height: "toggle",
-             opacity: "toggle"
-           }, "slow");
-        }
+      vm.isLoggingIn = loginService
     }
 })();
-
-$('.message a').click(function(){
-   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-});

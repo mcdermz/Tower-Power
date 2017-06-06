@@ -5,9 +5,13 @@
       templateUrl: './nav/nav.html'
     })
 
-    function controller () {
+    controller.$inject = ['loginService']
+    function controller (loginService) {
+      const vm = this
 
-
+      vm.showLoginForm = function () {
+        loginService.isLoggingIn = !loginService.isLoggingIn
+      }
 
     }
 })()
