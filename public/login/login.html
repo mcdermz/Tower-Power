@@ -1,9 +1,7 @@
 <div class="login-page" ng-if="$ctrl.loginService.showForm">
   <div class="form">
     <form ng-submit="$ctrl.createUser($ctrl.user)" class="register-form">
-      <input type="text" ng-model="$ctrl.user.userName" placeholder="username"/>
-      <input type="password" ng-model="$ctrl.user.password" placeholder="password"/>
-      <input type="text" ng-model="$ctrl.user.email" placeholder="email address"/>
+      <input type="text" ng-model="$ctrl.user.username" placeholder="username"/>
       <button>create</button>
       <p class="message">Already registered? <a ng-click="$ctrl.slideForm()" href="#">Sign In</a></p>
     </form>

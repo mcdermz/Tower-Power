@@ -4,14 +4,19 @@ require 'sinatra/activerecord'
 require './models/user'
 require './models/tower'
 require 'sinatra/json'
+require 'sinatra/cross_origin'
 
 set :public_folder, 'public'
 set :database, {adapter: 'postgresql', database: 'towerpower'}
 mime_type :json, "application/json"
+set :allow_origin, :any
+set :allow_methods, [:get, :post, :options]
+set :allow_credentials, true
+set :max_age, "1728000"
+set :expose_headers, ['Content-Type']
 
-also_reload '/public/index.html'
-after_reload do
-  puts 'reloaded'
+configure do
+  enable :cross_origin
 end
 
 get '/' do
@@ -21,6 +26,8 @@ end
 
 before do
   content_type :json
+  # return directly with 200 if request method is options
+  halt 200 if request.request_method == 'OPTIONS'
 end
 
 helpers do
