@@ -10,7 +10,7 @@
       const vm = this
 
       vm.showLoginForm = function () {
-        loginService.isLoggingIn = !loginService.isLoggingIn
+        loginService.showForm = !loginService.showForm
       }
 
     }

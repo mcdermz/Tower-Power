@@ -18,6 +18,6 @@
          }, "slow");
       }
 
-      vm.isLoggingIn = loginService
+      vm.loginService = loginService
     }
 })();
