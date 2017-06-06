@@ -8,7 +8,7 @@
     function controller () {
       // delete
       // move
+      vm.name = "commercialunit"
 
-      
     }
 })()

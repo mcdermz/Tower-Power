@@ -2,8 +2,12 @@
   angular.module('app')
     .component('residentialunit', {
       controller: controller,
-      templateUrl: './game/residential/residentialunit.html'
+      templateUrl: './game/residentials/residentialunit.html'
     })
 
-    function controller () {}
+    function controller () {
+      const vm = this
+      vm.name = "residentialunit"
+
+    }
 })()

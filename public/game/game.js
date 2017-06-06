@@ -8,8 +8,6 @@
     function controller() {
       const vm = this
 
-      // vm.emptyFloor = '<div class="floor row"><div class="col-md-12">HEY</div></div>'
-
       vm.newTower = function(num) {
         return new Array(num);
       }
@@ -17,6 +15,15 @@
       vm.$onInit = function () {
         vm.floors = new Array(6)
       }
+
+      vm.newCommercial = function () {
+
+      }
+
+      vm.newResidential = function () {
+
+      }
+
     }
 
 })()
