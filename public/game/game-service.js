@@ -9,10 +9,8 @@
 
       vm.tower = {
         floors: [
-          [vm.com, vm.res, vm.com],
+          [vm.com, vm.res, vm.com, vm.res],
           [vm.res, vm.com, vm.res],
-          [vm.res, vm.res, vm.res, vm.res],
-          [vm.com, vm.com, vm.com]
         ]
       }
 

@@ -9,7 +9,7 @@
     function controller(gameService) {
       const vm = this
       const floors = gameService.tower.floors
-      
+
       vm.newTower = function(num) {
         return new Array(num);
       }
@@ -18,11 +18,11 @@
       }
 
       vm.newUnit = function (unit) {
-        floors[0].push(gameService[unit])
+        if (floors[0].length < 4) floors[0].push(gameService[unit])
       }
 
       vm.newFloor = function () {
-        floors.unshift([])
+        if (floors.length < 8) floors.unshift([])
       }
     }
 
