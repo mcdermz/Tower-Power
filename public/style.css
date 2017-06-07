@@ -3,9 +3,20 @@
   background-color: white;
   width: 80%;
   text-align: center;
+  margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+#instructions-title {
+  margin-top: 4%;
+}
+
+.instructions-content{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
 }
 
 .instructions-text{
