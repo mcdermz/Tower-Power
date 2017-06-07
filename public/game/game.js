@@ -16,8 +16,9 @@
     vm.cashFlow = function () {
       return floors
       .reduce((a,b) => a.concat(b))
-      .map(el => el.netRevenue)
-      .reduce((a,b) => a + b)
+      .reduce((a,b) => {
+        return { netRevenue: a.netRevenue + b.netRevenue }
+      }).netRevenue
     }
 
     vm.$onInit = function () {
