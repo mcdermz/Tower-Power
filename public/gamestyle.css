@@ -25,10 +25,26 @@ commercialunit {
   width: calc(100%  /3);
 }
 
-.newthing{
+.toolbar{
   margin-left: 100px;
   margin-bottom: 100px;
   height: 500px;
   width: 250px;
   background-color: white;
+  border: 4px solid black;
+}
+
+#add-residential {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#add-commercial {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#add-floor {
+  width: 100%;
+  margin-bottom: 10px;
 }

@@ -1,7 +1,11 @@
 .instructions-dropdown{
   border:4px solid black;
   background-color: white;
-  width: 1000px;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .instructions-text{
