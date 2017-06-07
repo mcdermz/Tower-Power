@@ -8,7 +8,8 @@
     controller.$inject = ['gameService']
     function controller(gameService) {
       const vm = this
-
+      const floors = gameService.tower.floors
+      
       vm.newTower = function(num) {
         return new Array(num);
       }
@@ -17,9 +18,12 @@
       }
 
       vm.newUnit = function (unit) {
-        gameService.tower.floors[0].push(gameService[unit])
+        floors[0].push(gameService[unit])
       }
 
+      vm.newFloor = function () {
+        floors.unshift([])
+      }
     }
 
 })()
