@@ -12,18 +12,15 @@
 
 
     vm.$onInit = function () {
-
-      vm.population = gameService.tower.population
       vm.funds = gameService.tower.funds
-      vm.cashFlow = gameService.cashFlow()
+      vm.towerResources = gameService.towerResources()
     }
 
     vm.newUnit = function (unit) {
       if (floors[0].length < 4) {
         floors[0].push(gameService[unit])
         vm.funds -= 10
-        vm.cashFlow = gameService.cashFlow()
-        vm.population = gameService.population()
+        vm.towerResources = gameService.towerResources()
       }
     }
 
@@ -33,7 +30,5 @@
         vm.funds -= 100
       }
     }
-
-
   }
 })()

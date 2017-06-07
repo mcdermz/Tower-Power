@@ -3,12 +3,12 @@
   <emptyfloor></emptyfloor>
 
   <div class="toolbar">
-    <p><strong>People: </strong>{{$ctrl.population}}</p>
+    <p><strong>People: </strong>{{$ctrl.towerResources.population}}</p>
     <p><strong>Funds: </strong>${{$ctrl.funds}}</p>
     <p><strong>Net Income: </strong><span ng-class="{
-        'positive': $ctrl.cashFlow > 0,
-        'negative': $ctrl.cashFlow < 0}">
-        ( {{$ctrl.cashFlow}} )</span>
+        'positive': $ctrl.towerResources.netRevenue > 0,
+        'negative': $ctrl.towerResources.netRevenue < 0}">
+        ( {{$ctrl.towerResources.netRevenue}} )</span>
     </p>
     <hr>
     <div class="add building">
