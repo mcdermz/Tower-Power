@@ -1,12 +1,14 @@
 .instructions-dropdown{
   border:4px solid black;
-  background-color: white;
-  width: 80%;
+  width: 50%;
+  height: 400px;
   text-align: center;
   margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  font-size: 20px;
+  background-color: rgba(255,255,255,0.5);
 }
 
 #instructions-title {
@@ -122,4 +124,8 @@ body {
   background-image: url("https://s-media-cache-ak0.pinimg.com/originals/47/1a/08/471a08fc76dc51e61d8cc160a70f3448.jpg");
   background-repeat:no-repeat;
   background-position:center;
+}
+
+.scrollingDiv {
+   overflow:scroll;
 }
