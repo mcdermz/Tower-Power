@@ -12,17 +12,17 @@
   background-color: grey;
   border-width: medium;
   border-color: 5px;
-  width: 600px;
+  width: 700px;
   height: 100px;
 }
 
 residentialunit {
   background-color: lightgreen;
-  flex: 3;
+  width: calc(100%  /4);
 }
 commercialunit {
   background-color: powderblue;
-  flex: 4;
+  width: calc(100%  /3);
 }
 
 .newthing{
