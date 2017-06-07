@@ -6,6 +6,9 @@
     })
 
     function controller () {
-      
+      const vm = this
+      vm.$onInit = function () {
+        vm.floors = new Array(6)
+      }
     }
 })()

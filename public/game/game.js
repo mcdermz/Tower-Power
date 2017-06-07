@@ -14,7 +14,6 @@
 
       vm.$onInit = function () {
         vm.floors = new Array(6)
-        vm.spaces = new Array(12)
       }
 
       vm.newCommercial = function () {
