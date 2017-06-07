@@ -3,8 +3,13 @@
   <emptyfloor></emptyfloor>
 
   <div class="toolbar">
-    <p><strong>People:</strong>{{$ctrl.population}}</p>
-    <p><strong>Funds:</strong>${{$ctrl.funds}} (+2)</p>
+    <p><strong>People: </strong>{{$ctrl.population}}</p>
+    <p><strong>Funds: </strong>${{$ctrl.funds}}</p>
+    <p><strong>Net Income: </strong><span ng-class="{
+        'positive': $ctrl.cashFlow > 0,
+        'negative': $ctrl.cashFlow < 0}">
+        ( {{$ctrl.cashFlow}} )</span>
+    </p>
     <hr>
     <div class="add building">
       <button id="add-residential" class="btn btn-primary" ng-click="$ctrl.newUnit('res')"> Add Residential</button>
