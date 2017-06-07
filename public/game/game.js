@@ -8,13 +8,13 @@
   controller.$inject = ['gameService']
   function controller(gameService) {
     const vm = this
-    const floors = gameService.tower.floors
-
-    vm.population = gameService.tower.population
-    vm.funds = gameService.tower.funds
 
 
     vm.$onInit = function () {
+      const floors = gameService.tower.floors
+
+      vm.population = gameService.tower.population
+      vm.funds = gameService.tower.funds
       vm.cashFlow = gameService.cashFlow()
     }
 
