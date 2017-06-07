@@ -21,5 +21,9 @@
           return { netRevenue: a.netRevenue + b.netRevenue }
         }).netRevenue
       }
+
+      this.population = function () {
+        
+      }
     }
 })()
