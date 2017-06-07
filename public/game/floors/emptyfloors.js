@@ -5,17 +5,12 @@
       controller: controller,
       templateUrl: './game/floors/emptyfloors.html'
     })
-
-    function controller () {
+    controller.$inject = ['gameService']
+    function controller (gameService) {
       const vm = this
-      
+
       vm.$onInit = function () {
-        vm.floors = [
-          ['com', 'res', 'com'],
-          ['res', 'com', 'res'],
-          ['res', 'res', 'res', 'res'],
-          ['com', 'com', 'com']
-        ]
+        vm.floors = gameService.tower.floors
       }
     }
 })()

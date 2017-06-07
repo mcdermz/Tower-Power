@@ -13,15 +13,15 @@
       }
 
       vm.$onInit = function () {
-        vm.floors = new Array(6)
       }
 
       vm.newCommercial = function () {
+        console.log('add new com!');
 
       }
 
       vm.newResidential = function () {
-
+        console.log('add new res!');
       }
 
     }
