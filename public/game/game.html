@@ -3,8 +3,8 @@
   <emptyfloor></emptyfloor>
 
   <div class="toolbar">
-    <p><strong>People:</strong>0</p>
-    <p><strong>Funds:</strong>$0</p>
+    <p><strong>People:</strong>{{$ctrl.population}}</p>
+    <p><strong>Funds:</strong>{{$ctrl.funds}}</p>
     <hr>
     <div class="add building">
       <button id="add-residential" class="btn btn-primary" ng-click="$ctrl.newUnit('res')"> Add Residential</button>
