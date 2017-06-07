@@ -8,9 +8,11 @@
     templateUrl: './towerpower.html'
 
         })
-
-  function controller () {
+  controller.$inject = ['gameService']
+  function controller (gameService) {
     const vm = this
+    vm.game = gameService
+
    }
 
 })();

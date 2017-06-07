@@ -1,4 +1,3 @@
-<navbar></navbar>
 <login></login>
-<splash></splash>
-<game ng-if="!$ctrl.isPlaying"></game>
+<splash ng-if="!$ctrl.game.isPlaying"></splash>
+<game ng-if="$ctrl.game.isPlaying"></game>
