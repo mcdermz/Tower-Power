@@ -8,12 +8,19 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
+  display: flex;
   background-color: grey;
+  border-width: medium;
+  border-color: 5px;
   width: 600px;
   height: 100px;
 }
 
-.unit {
-  background-color: green;
+residentialunit {
+  background-color: lightgreen;
+  flex: 3;
+}
+commercialunit {
+  background-color: powderblue;
+  flex: 4;
 }
