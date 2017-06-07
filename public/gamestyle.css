@@ -28,13 +28,15 @@
   height: 100px;
 }
 
-.unit > residentialunit {
+.unit.residential-unit {
   background-color: lightgreen;
   width: calc(100%  /4);
+  /*flex: 4;*/
 }
-.unit > commercialunit {
+.unit.commercial-unit {
   background-color: powderblue;
   width: calc(100%  /3);
+  /*flex: 5;*/
 }
 
 .toolbar{

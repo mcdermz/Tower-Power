@@ -8,6 +8,7 @@
 
     function controller () {
       const vm = this
+      
       vm.$onInit = function () {
         vm.floors = [
           ['com', 'res', 'com'],
