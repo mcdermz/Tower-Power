@@ -4,12 +4,15 @@
 
   <div class="toolbar">
     <p><strong>People:</strong>{{$ctrl.population}}</p>
-    <p><strong>Funds:</strong>{{$ctrl.funds}}</p>
+    <p><strong>Funds:</strong>${{$ctrl.funds}} (+2)</p>
     <hr>
     <div class="add building">
       <button id="add-residential" class="btn btn-primary" ng-click="$ctrl.newUnit('res')"> Add Residential</button>
       <button id="add-commercial" ng-click="$ctrl.newUnit('com')" class="btn btn-primary">Add Commercial</button>
       <button id="add-floor" class="btn btn-primary" ng-click="$ctrl.newFloor()"> Add Floor</button>
+    </div>
+    <div class="stars">
+      <p>Star rating: (* * * * *)</p>
     </div>
   </div>
 </div>
