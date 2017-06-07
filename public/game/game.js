@@ -27,6 +27,3 @@
     }
 
 })()
-
-
-// <div ng-repeat="i in getNumber(number)" class="slot col-xs-1"><small>slot</small></div>
