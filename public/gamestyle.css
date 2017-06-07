@@ -24,3 +24,11 @@ commercialunit {
   background-color: powderblue;
   flex: 4;
 }
+
+.newthing{
+  margin-left: 100px;
+  margin-bottom: 100px;
+  height: 500px;
+  width: 250px;
+  background-color: white;
+}
