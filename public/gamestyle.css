@@ -1,9 +1,4 @@
-body {
-  cursor: url('./assets/cursor.png'), auto;
-}
-body:active {
-  cursor: url('./assets/cursor-click.png'), auto;
-}
+
 .gamewindow {
   width: 100%;
   height: 100vh;
