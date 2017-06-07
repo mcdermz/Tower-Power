@@ -4,7 +4,7 @@
   padding-bottom: 15px;
 }
 
-.row.floor {
+.tower {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,11 +16,23 @@
   height: 100px;
 }
 
-residentialunit {
+.floor.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: grey;
+  border-width: medium;
+  border-color: 5px;
+  width: 700px;
+  height: 100px;
+}
+
+.unit > residentialunit {
   background-color: lightgreen;
   width: calc(100%  /4);
 }
-commercialunit {
+.unit > commercialunit {
   background-color: powderblue;
   width: calc(100%  /3);
 }
