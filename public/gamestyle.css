@@ -1,3 +1,10 @@
+.module {
+  cursor: url('path-to-image.png'), auto;
+}
+.module:active {
+  cursor: url('path-to-image.png'), auto;
+}
+
 .gamewindow {
   width: 100%;
   height: 100vh;
