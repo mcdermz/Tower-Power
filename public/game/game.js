@@ -13,7 +13,7 @@
     vm.population = gameService.tower.population
     vm.funds = gameService.tower.funds
 
-    vm.cashFlow = function () {
+    cashFlow = function () {
       return floors
       .reduce((a,b) => a.concat(b))
       .reduce((a,b) => {
@@ -28,7 +28,7 @@
       if (floors[0].length < 4) {
         floors[0].push(gameService[unit])
         vm.funds -= 10
-        console.log(vm.cashFlow());
+        console.log(cashFlow());
       }
     }
 
