@@ -1,4 +1,5 @@
 (function () {
+  'use strict'
   angular.module('app')
     .component('emptyfloor', {
       controller: controller,
@@ -8,7 +9,12 @@
     function controller () {
       const vm = this
       vm.$onInit = function () {
-        vm.floors = new Array(6)
+        vm.floors = [
+          ['com', 'res', 'com'],
+          ['res', 'com', 'res'],
+          ['res', 'res', 'res', 'res'],
+          ['com', 'com', 'com']
+        ]
       }
     }
 })()

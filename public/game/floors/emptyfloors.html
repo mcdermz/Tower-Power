@@ -1,7 +1,6 @@
-<div class="floor row justify-content-start align-items-stretch" ng-repeat="floor in $ctrl.floors track by $index">
-  <residentialunit></residentialunit>
-  <commercialunit></commercialunit>
-  <residentialunit></residentialunit>
-
-
+<div class="tower" ng-repeat="floor in $ctrl.floors track by $index">
+  <div class="unit justify-content-start align-items-stretch" ng-repeat="room in floor track by $index">
+    <commercialunit ng-if="room === 'com'"></commercialunit>
+    <residentialunit ng-if="room === 'res'"></residentialunit>
+  </div>
 </div>
