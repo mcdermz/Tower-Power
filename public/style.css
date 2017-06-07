@@ -1,4 +1,4 @@
-html, html button:hover, html a:hover {
+html button:hover, html a:hover {
   cursor: url('./assets/cursor.png'), auto !important;
 }
 html button:active, html a:active {
