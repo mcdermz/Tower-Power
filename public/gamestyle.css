@@ -57,6 +57,14 @@
   border: 4px solid black;
 }
 
+.positive {
+  color: rgb(0, 134, 10)
+}
+
+.negative {
+  color: red
+}
+
 #add-residential {
   width: 100%;
   margin-bottom: 10px;
