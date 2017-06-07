@@ -36,3 +36,11 @@
   background-color: powderblue;
   width: calc(100%  /3);
 }
+
+.newthing{
+  margin-left: 100px;
+  margin-bottom: 100px;
+  height: 500px;
+  width: 250px;
+  background-color: white;
+}
