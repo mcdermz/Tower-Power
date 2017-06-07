@@ -120,5 +120,6 @@
 
 body {
   background-image: url("https://s-media-cache-ak0.pinimg.com/originals/47/1a/08/471a08fc76dc51e61d8cc160a70f3448.jpg");
-  background-size: 1900px;
+  background-repeat:no-repeat;
+  background-position:center;
 }
