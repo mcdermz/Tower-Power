@@ -10,6 +10,7 @@
     const vm = this
     const floors = gameService.tower.floors
 
+    vm.isPlaying = true
     vm.population = gameService.tower.population
     vm.funds = gameService.tower.funds
 
