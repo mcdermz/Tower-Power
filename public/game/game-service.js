@@ -4,15 +4,15 @@
 
     function service() {
       const vm = this
-      const com = { name: 'com'}
-      const res = { name: 'res'}
+      vm.com = { name: 'com'}
+      vm.res = { name: 'res'}
 
       vm.tower = {
         floors: [
-          [com, res, com],
-          [res, com, res],
-          [res, res, res, res],
-          [com, com, com]
+          [vm.com, vm.res, vm.com],
+          [vm.res, vm.com, vm.res],
+          [vm.res, vm.res, vm.res, vm.res],
+          [vm.com, vm.com, vm.com]
         ]
       }
 

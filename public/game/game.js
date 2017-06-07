@@ -5,7 +5,8 @@
       templateUrl: './game/game.html'
     })
 
-    function controller() {
+    controller.$inject = ['gameService']
+    function controller(gameService) {
       const vm = this
 
       vm.newTower = function(num) {
@@ -15,13 +16,8 @@
       vm.$onInit = function () {
       }
 
-      vm.newCommercial = function () {
-        console.log('add new com!');
-
-      }
-
-      vm.newResidential = function () {
-        console.log('add new res!');
+      vm.newUnit = function (unit) {
+        gameService.tower.floors[0].push(gameService[unit])
       }
 
     }
