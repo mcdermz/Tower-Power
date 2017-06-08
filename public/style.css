@@ -1,14 +1,13 @@
-html button:hover, html a:hover {
-  cursor: url('./assets/cursor.png'), auto !important;
+body, html, html button:hover, html a:hover {
+  cursor: url('/assets/cursor.png') auto !important;
 }
-html button:active, html a:active {
-  cursor: url('./assets/cursor-click.png'), auto !important;
+body, html, html button:active, html a:active {
+  cursor: url('/assets/cursor-click.png') auto !important;
 }
 
 #logo-header {
-
-    width: 550px;
-    height: 95px;
+  width: 550px;
+  height: 95px;
 }
 .navbar-brand {
   width: 50px;
