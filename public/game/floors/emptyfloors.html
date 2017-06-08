@@ -1,4 +1,12 @@
+
+
 <div class="tower" ng-repeat="floor in $ctrl.floors track by $index">
+
+  <img id="stairs-first-left" class="stairs align-self-start" src="../../assets/stairs-first-left.png" alt="">
+
+
+
+
   <div class="unit justify-content-start align-items-stretch" ng-repeat="room in floor track by $index" ng-class="{
     'commercial-unit': room.name === 'com',
     'residential-unit': room.name === 'res'
@@ -6,4 +14,11 @@
     <commercialunit class="commercial-unit" ng-if="room.name === 'com'"></commercialunit>
     <residentialunit ng-if="room.name === 'res'"></residentialunit>
   </div>
+
+
+  <div id="filler" class="filler"></div>
+
+
+  <img id="stairs-first-right" class="stairs align-self-end" src="../../assets/stairs-first-right.png" alt="">
+
 </div>

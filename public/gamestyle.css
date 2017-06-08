@@ -2,6 +2,8 @@
   width: 100%;
   height: 100vh;
   padding-bottom: 15px;
+  flex-wrap: wrap;
+  overflow: visible;
 }
 
 .tower {
@@ -10,27 +12,16 @@
   display: -ms-flexbox;
   display: flex;
   background-color: grey;
-  border-width: medium;
-  border-color: 5px;
   width: 700px;
   height: 100px;
 }
 
-.floor.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: grey;
-  border-width: medium;
-  border-color: 5px;
-  width: 700px;
-  height: 100px;
-}
+
 
 .unit.residential-unit {
   background-color: lightgreen;
   width: calc(100%  /4);
+  position: relative;
   /*flex: 4;*/
 }
 .unit.commercial-unit {
@@ -58,7 +49,9 @@
   color: red
 }
 
-img {
+img#res-btn,
+img#com-btn,
+img#floor-btn {
   height: 50px;
   width: 50px;
 }
@@ -77,3 +70,47 @@ img {
   width: 100%;
   margin-bottom: 10px;
 }
+
+input[type=radio] {
+  display: none;
+}
+
+/* these add colors to icon button boxes */
+/*.btn-outline-secondary {
+  background-color: none !important;
+  border-color: #8064A2 !important;
+}
+.btn-outline-secondary:hover,
+.btn-outline-secondary:active,
+.btn-outline-secondary:visited,
+.btn-outline-secondary:focus {
+    background-color: lightgreen !important;
+    border-color: green !important;
+}*/
+
+.filler#filler {
+  min-width: -1px;
+  flex-grow: 1;
+}
+
+.stairs#stairs-first-left {
+  width: 15px;
+  height: 100px;
+  position: relative;
+   left: -15px;
+  margin-right: -15px;
+}
+.stairs#stairs-first-right {
+  width: 15px;
+  height: 100px;
+  position:relative;
+   right: -15px;
+  margin-left: -15px;
+}
+
+/*img.stairs#stairs {
+  max-width: 100%;
+  max-height: 100%;
+  width: 15px;
+  height:auto;
+}*/
