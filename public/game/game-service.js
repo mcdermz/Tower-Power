@@ -22,9 +22,13 @@
         return $interval(() => {
           this.tower.funds += this.tower.towerResources.netRevenue
           if (this.tower.funds < 0) {
-            window.alert('You Lose!')
             this.tower.funds = 1000
+            this.tower.towerResources = {  
+              netRevenue: 0,
+              population: 0,
+            }
             this.isPlaying = false
+            window.alert('You Lose!')
           }
         }, 1000);
       }
