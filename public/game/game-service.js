@@ -12,5 +12,14 @@
         ],
         funds: 1000,
       }
+
+      this.startTimer = function (i = 1) {
+          i++;
+          setTimeout(startTimer, 1000); // callback
+
+          if (i % 1 === 0)  {
+            console.log(i);
+          }
+      }
     }
 })()
