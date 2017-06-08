@@ -6,8 +6,8 @@ body, html, html button:active, html a:active {
 }
 
 #logo-header {
-  width: 550px;
-  height: 95px;
+  width: 450%;
+  height: 100%;
 }
 .navbar-brand {
   width: 50px;
