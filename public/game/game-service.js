@@ -4,8 +4,8 @@
 
     service.$inject = ['$interval', '$window']
     function service($interval, $window) {
-      this.com = { name: 'com', cost: 100, netRevenue: 2, population: 0}
-      this.res = { name: 'res', cost: 150, netRevenue: -1, population: 5}
+      this.com = { name: 'com', cost: 150, netRevenue: 5, population: 0}
+      this.res = { name: 'res', cost: 100, netRevenue: -10, population: 5}
 
       this.tower = {
         floors: [

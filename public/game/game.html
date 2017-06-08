@@ -12,9 +12,9 @@
     </p>
     <hr>
     <div class="add building">
-      <button id="add-residential" class="btn btn-primary" ng-click="$ctrl.newUnit('res')"> Add Residential ( -$15 )</button>
-      <button id="add-commercial" ng-click="$ctrl.newUnit('com')" class="btn btn-primary">Add Commercial ( -$10 )</button>
-      <button id="add-floor" class="btn btn-primary" ng-click="$ctrl.newFloor()"> Add Floor ( -$100 )</button>
+      <button id="add-residential" class="btn btn-primary" ng-click="$ctrl.newUnit('res')"> Add Residential ( {{$ctrl.resCost}} )</button>
+      <button id="add-commercial" ng-click="$ctrl.newUnit('com')" class="btn btn-primary">Add Commercial ( {{$ctrl.comCost}} )</button>
+      <button id="add-floor" class="btn btn-primary" ng-click="$ctrl.newFloor()"> Add Floor ( {{$ctrl.floorCost}} )</button>
     </div>
     <div class="stars">
       <p>Star rating: (* * * * *)</p>

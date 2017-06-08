@@ -20,6 +20,9 @@
   function controller(gameService) {
     const vm = this
     vm.game = gameService.tower
+    vm.resCost = gameService.res.cost
+    vm.comCost = gameService.com.cost
+    vm.floorCost = 75
 
     vm.$onInit = function () {
       gameService.startTimer()
@@ -37,11 +40,9 @@
     }
 
     vm.newFloor = function () {
-      const floorCost = 100
-
-      if (vm.game.floors.length < 8 && vm.game.floors[0].length >= 4 && vm.game.funds >= floorCost) {
+      if (vm.game.floors.length < 8 && vm.game.floors[0].length >= 4 && vm.game.funds >= vm.floorCost) {
         vm.game.floors.unshift([])
-        vm.game.funds -= floorCost
+        vm.game.funds -= vm.floorCost
       }
     }
   }
