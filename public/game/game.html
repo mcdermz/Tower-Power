@@ -4,7 +4,7 @@
 
   <div class="toolbar">
     <p><strong>People: </strong>{{$ctrl.game.towerResources.population}}</p>
-    <p><strong>Funds: </strong>${{$ctrl.game.funds}}</p>
+    <p ng-class="{'negative': $ctrl.game.funds < 0}"><strong>Funds: </strong>${{$ctrl.game.funds}}</p>
     <p><strong>Net Income: </strong><span ng-class="{
         'positive': $ctrl.game.towerResources.netRevenue > 0,
         'negative': $ctrl.game.towerResources.netRevenue < 0}">

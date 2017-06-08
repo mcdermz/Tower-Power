@@ -21,7 +21,6 @@
       this.startTimer = function (i = 1) {
         return $interval(() => {
           this.tower.funds += this.tower.towerResources.netRevenue
-          console.log(this.tower.funds);
         }, 1000);
       }
     }

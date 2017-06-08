@@ -29,7 +29,7 @@
     }
 
     vm.newUnit = function (unit) {
-      if (vm.game.floors[0].length < 6) {
+      if (vm.game.floors[0].length < 6 && vm.game.funds >= gameService[unit].cost) {
         vm.game.floors[0].push(gameService[unit])
         vm.game.funds -= gameService[unit].cost
         vm.game.towerResources = towerResources(vm.game.floors)
@@ -37,9 +37,11 @@
     }
 
     vm.newFloor = function () {
-      if (vm.game.floors.length < 8 && vm.game.floors[0].length >= 4) {
+      const floorCost = 100
+
+      if (vm.game.floors.length < 8 && vm.game.floors[0].length >= 4 && vm.game.funds >= floorCost) {
         vm.game.floors.unshift([])
-        vm.game.funds -= 100
+        vm.game.funds -= floorCost
       }
     }
   }
