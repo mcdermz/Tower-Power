@@ -58,6 +58,11 @@
   color: red
 }
 
+img {
+  height: 50px;
+  width: 50px;
+}
+
 #add-residential {
   width: 100%;
   margin-bottom: 10px;
