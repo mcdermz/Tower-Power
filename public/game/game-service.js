@@ -12,10 +12,17 @@
           []
         ],
         funds: 1000,
+        towerResources: {
+          netRevenue: 0,
+          population: 0,
+        }
       }
 
       this.startTimer = function (i = 1) {
-        return $interval(() => { console.log(i++)}, 1000);
+        return $interval(() => {
+          this.tower.funds += this.tower.towerResources.netRevenue
+          console.log(this.tower.funds);
+        }, 1000);
       }
     }
 })()
