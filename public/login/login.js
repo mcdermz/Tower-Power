@@ -8,8 +8,8 @@
 
         })
 
-    controller.$inject = ['loginService', '$http']
-    function controller(loginService, $http) {
+    controller.$inject = ['loginService']
+    function controller(loginService) {
       const vm = this
       vm.slideForm = function(){
          $('form').animate({
@@ -20,15 +20,9 @@
 
       vm.loginService = loginService
 
-      vm.createUser = function createUser(userData){
-        const createUserUrl = 'http://localhost:4567/users'
-        return $http.post(createUserUrl, userData).then(response => {
-          delete vm.user
-          return response
-        }).catch(err => {
-          console.log(err)
-        })
-
+      vm.createUser = function (userData){
+        loginService.createUser(userData)
+        delete vm.user
       }
     }
 })();

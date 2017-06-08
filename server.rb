@@ -8,12 +8,14 @@ require 'sinatra/cross_origin'
 
 set :public_folder, 'public'
 set :database, {adapter: 'postgresql', database: 'towerpower'}
-mime_type :json, "application/json"
 set :allow_origin, :any
 set :allow_methods, [:get, :post, :options]
 set :allow_credentials, true
 set :max_age, "1728000"
 set :expose_headers, ['Content-Type']
+mime_type :json, 'application/json'
+
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/towerpower')
 
 configure do
   enable :cross_origin
