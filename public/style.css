@@ -5,9 +5,10 @@ body, html, html button:active, html a:active {
   cursor: url('/assets/cursor-click.png') auto !important;
 }
 
-#logo-header {
-  width: 450%;
-  height: 100%;
+#logo-header-large {
+  margin-top: -5px;
+  width: 250px;
+  height: 50px;
 }
 .navbar-brand {
   width: 50px;
