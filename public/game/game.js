@@ -27,7 +27,7 @@
     }
 
     vm.newUnit = function (unit) {
-      if (floors[0].length < 4) {
+      if (floors[0].length < 6) {
         floors[0].push(gameService[unit])
         vm.funds -= gameService[unit].cost
         vm.towerResources = towerResources(floors)
