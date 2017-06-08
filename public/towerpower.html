@@ -1,5 +1,5 @@
 <div class="mainbody">
   <login></login>
   <splash ng-show="!$ctrl.game.isPlaying && !$ctrl.login.showForm "></splash>
-  <game ng-show="$ctrl.game.isPlaying"></game>
+  <game ng-if="$ctrl.game.isPlaying"></game>
 </div>

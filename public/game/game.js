@@ -19,24 +19,26 @@
   controller.$inject = ['gameService']
   function controller(gameService) {
     const vm = this
-    const floors = gameService.tower.floors
+    vm.game = gameService.tower
 
     vm.$onInit = function () {
+      gameService.startTimer()
       vm.funds = gameService.tower.funds
-      vm.towerResources = (floors.length === 1 && floors[0].length < 1) ? { netRevenue: 0, population: 0 } : towerResources(floors)
+      vm.game.towerResources = (vm.game.floors.length === 1 && vm.game.floors[0].length < 1) ? { netRevenue: 0, population: 0 } : towerResources(vm.game.floors)
+
     }
 
     vm.newUnit = function (unit) {
       if (floors[0].length < 6) {
         floors[0].push(gameService[unit])
         vm.funds -= gameService[unit].cost
-        vm.towerResources = towerResources(floors)
+        vm.game.towerResources = towerResources(vm.game.floors)
       }
     }
 
     vm.newFloor = function () {
-      if (floors.length < 8 && floors[0].length >= 3) {
-        floors.unshift([])
+      if (vm.game.floors.length < 8 && vm.game.floors[0].length >= 4) {
+        vm.game.floors.unshift([])
         vm.funds -= 100
       }
     }

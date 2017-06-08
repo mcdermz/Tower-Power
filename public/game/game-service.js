@@ -2,7 +2,8 @@
   angular.module('app')
     .service('gameService', service)
 
-    function service() {
+    service.$inject = ['$interval']
+    function service($interval) {
       this.com = { name: 'com', cost: 10, netRevenue: 2, population: 0}
       this.res = { name: 'res', cost: 15, netRevenue: -1, population: 5}
 
@@ -14,12 +15,7 @@
       }
 
       this.startTimer = function (i = 1) {
-          i++;
-          setTimeout(startTimer, 1000); // callback
-
-          if (i % 1 === 0)  {
-            console.log(i);
-          }
+        return $interval(() => { console.log(i++)}, 1000);
       }
     }
 })()

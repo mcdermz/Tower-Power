@@ -15,7 +15,6 @@
 
     vm.newGame = function(){
       gameService.isPlaying = !gameService.isPlaying
-
     }
    }
 
