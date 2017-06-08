@@ -23,11 +23,13 @@
   width: calc(100%  /4);
   position: relative;
   /*flex: 4;*/
+  border: 3px solid black;
 }
 .unit.commercial-unit {
   background-color: powderblue;
   width: calc(100%  /3);
   /*flex: 5;*/
+  border: 3px solid black;
 }
 
 .toolbar{
@@ -49,11 +51,21 @@
   color: red
 }
 
-img#res-btn,
-img#com-btn,
-img#floor-btn {
-  height: 50px;
-  width: 50px;
+.unit-res, .unit-com{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#com-btn {
+  max-width: 32%;
+  margin-top: 15px;
+
+}
+
+#res-btn{
+  margin-top: 15px;
+  max-width: 40%;
 }
 
 #add-residential {
