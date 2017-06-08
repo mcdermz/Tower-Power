@@ -5,22 +5,32 @@
       templateUrl: './game/game.html'
     })
 
+  function towerResources(resource) {
+    return resource
+    .reduce((a,b) => a.concat(b))
+    .reduce((a,b) => {
+      return {
+        netRevenue: a.netRevenue + b.netRevenue,
+        population: a.population + b.population
+      }
+    })
+  }
+
   controller.$inject = ['gameService']
   function controller(gameService) {
     const vm = this
     const floors = gameService.tower.floors
 
-
     vm.$onInit = function () {
       vm.funds = gameService.tower.funds
-      vm.towerResources = gameService.towerResources()
+      vm.towerResources = (floors.length === 1 && floors[0].length < 1) ? { netRevenue: 0, population: 0 } : towerResources(floors)
     }
 
     vm.newUnit = function (unit) {
       if (floors[0].length < 4) {
         floors[0].push(gameService[unit])
         vm.funds -= gameService[unit].cost
-        vm.towerResources = gameService.towerResources()
+        vm.towerResources = towerResources(floors)
       }
     }
 
