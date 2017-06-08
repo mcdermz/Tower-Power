@@ -2,9 +2,13 @@
 
   <emptyfloor></emptyfloor>
 
-  <div class="toolbar">
-    <p><strong>People: </strong>{{$ctrl.game.towerResources.population}}</p>
-    <p ng-class="{'negative': $ctrl.game.funds < 0}"><strong>Funds: </strong>${{$ctrl.game.funds}}</p>
+
+  <div class="toolbar p-3">
+    <div class="d-flex justify-content-around align-items-center">
+      <img src="../assets/group-48.png" alt="">  <strong>{{$ctrl.game.towerResources.population}}</strong>
+      <img src="../assets/money-bag-48.png" alt=""><strong ng-class="{'negative': $ctrl.game.funds < 0}">  ${{$ctrl.game.funds}}</strong>
+    </div>
+
     <p><strong>Net Income: </strong><span ng-class="{
         'positive': $ctrl.game.towerResources.netRevenue > 0,
         'negative': $ctrl.game.towerResources.netRevenue < 0}">
@@ -17,6 +21,6 @@
       <button id="add-floor" class="btn btn-primary" ng-click="$ctrl.newFloor()"> Add Floor ( {{$ctrl.floorCost}} )</button>
     </div>
     <div class="stars">
-      <p>Star rating: (* * * * *)</p>
+      <p>Star rating: <img class="star" src="../assets/star_gold.png" alt=""><img class="star" src="../assets/star-32-black.png" alt=""><img class="star" src="../assets/star-32-black.png" alt=""><img class="star" src="../assets/star-32-black.png" alt=""><img class="star" src="../assets/star-32-black.png" alt=""></p>
     </div>
 </div>
