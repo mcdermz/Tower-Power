@@ -23,7 +23,8 @@
     <div class="add building">
       <button id="add-residential" class="btn btn-primary" ng-class="{'disabled': $ctrl.game.funds < $ctrl.resCost}" ng-click="$ctrl.newUnit('res')"> Add Residential ( {{$ctrl.resCost}} )</button>
       <button id="add-commercial" ng-class="{'disabled': $ctrl.game.funds < $ctrl.comCost}" ng-click="$ctrl.newUnit('com')" class="btn btn-primary">Add Commercial ( {{$ctrl.comCost}} )</button>
-      <button id="add-floor" class="btn btn-primary" ng-class="{'disabled': $ctrl.game.funds < $ctrl.floorCost}" ng-click="$ctrl.newFloor()"> Add Floor ( {{$ctrl.floorCost}} )</button>
+      <button id="add-floor" class="btn btn-primary invisible" ng-class="{'disabled': $ctrl.game.funds < $ctrl.floorCost,
+    'invisible': $ctrl.game.floors[0].length < 4}" ng-click="$ctrl.newFloor()"> Add Floor ( {{$ctrl.floorCost}} )</button>
     </div>
 
     <div class="stars text-center m-3">
