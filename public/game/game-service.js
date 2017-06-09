@@ -4,9 +4,8 @@
 
     service.$inject = ['$interval', '$window']
     function service($interval, $window) {
-      this.com = { name: 'com', cost: 150, netRevenue: 5, population: 0}
-      this.res = { name: 'res', cost: 100, netRevenue: -10, population: 5}
-      this.time = 0
+      this.com = { name: 'com', cost: 150, netRevenue: 6, population: 0}
+      this.res = { name: 'res', cost: 100, netRevenue: -9, population: 5}
       this.starLevels = [5, 10, 15, 25, 35]
 
       this.tower = {
@@ -19,10 +18,11 @@
           population: 0,
         },
         starRating: 0,
+        time: 0,
         stars: new Array(5).fill('black')
       }
 
-      this.gameOver = function (outcome) {
+      this.gameOver = function (outcome, time) {
         this.tower = {
           floors: [
             []
@@ -35,7 +35,7 @@
           starRating: 0,
           stars: new Array(5).fill('black'),
         }
-        window.alert(`You ${outcome}!!!! Your SCORE is: ${this.time}`)
+        window.alert(`You ${outcome}!!!! Your SCORE is: ${time}`)
         this.isPlaying = false
       }
 
@@ -43,18 +43,25 @@
         return (this.starLevels.indexOf(pop) !== -1)
       }
 
+      let promise
+
       this.startTimer = function () {
-        return $interval(() => {
-          this.time += 1
+        this.stopTimer()
+        promise = $interval(() => {
+          this.tower.time += 1
 
           if (this.tower.funds < 0) {
-            this.gameOver('lose')
+            this.gameOver('lose', this.tower.time)
           }
           if (this.tower.stars.slice(-1)[0] === 'gold'){
-            this.gameOver('WIN')
+            this.gameOver('WIN', this.tower.time)
           }
           this.tower.funds += this.tower.towerResources.netRevenue
         }, 1000);
+      }
+
+      this.stopTimer = function () {
+        $interval.cancel(promise)
       }
     }
 })()

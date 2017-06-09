@@ -31,6 +31,7 @@
     vm.stars = gameService.tower.stars
 
     vm.$onInit = function () {
+      vm.game.time = 0
       gameService.startTimer()
       console.log(vm.game.towerResources.population);
       vm.funds = gameService.tower.funds
