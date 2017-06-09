@@ -53,6 +53,9 @@
           if (this.tower.funds < 0) {
             this.gameOver('lose', this.tower.time)
           }
+          if (this.tower.towerResources.netRevenue === 0 && this.tower.funds < 100) {
+            this.gameOver('are stuck! You have zero income and do not have enough money to build any more units. Try again!', 'No score for you!')
+          }
           if (this.tower.stars.slice(-1)[0] === 'gold'){
             this.gameOver('WIN', this.tower.time)
           }
