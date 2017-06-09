@@ -22,7 +22,7 @@
     </div>
     <div class="stars">
       <p>Star rating:
-        <img ng-repeat="star in $ctrl.stars track by $index" class="star" ng-src="{{$ctrl.hasStar($index)}}" alt="">
+        <img ng-repeat="star in $ctrl.stars track by $index" class="star" ng-src="{{$ctrl.hasStar(star)}}" alt="">
       </p>
     </div>
 </div>
