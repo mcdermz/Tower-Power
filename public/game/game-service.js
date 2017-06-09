@@ -6,7 +6,7 @@
     function service($interval, $window) {
       this.com = { name: 'com', cost: 150, netRevenue: 6, population: 0}
       this.res = { name: 'res', cost: 100, netRevenue: -9, population: 5}
-      this.starLevels = [5, 10, 15, 25, 35]
+      this.starLevels = [5, 15, 25, 35, 50]
 
       this.tower = {
         floors: [
