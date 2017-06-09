@@ -3,6 +3,6 @@
   if (window) {
     Object.assign(env, window.__env);
   }
-  angular.module('app', [])
+  angular.module('app', ['ngAnimate'])
     .constant('__env', env)
 })()
