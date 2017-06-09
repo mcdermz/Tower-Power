@@ -47,7 +47,7 @@
         vm.game.funds -= gameService[unit].cost
         vm.game.towerResources = towerResources(vm.game.floors)
 
-        if (gameService.checkPopulation(vm.game.towerResources.population)) {
+        if (gameService.checkPopulation(vm.game.towerResources.population) && unit === 'res') {
           vm.stars.unshift('gold')
           vm.stars.pop()
         }
