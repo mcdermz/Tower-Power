@@ -131,9 +131,20 @@ input[type=radio] {
   margin-left: -15px;
 }
 
+.five-stars {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.pop-goal-img{
+  max-width: 23px;
+  max-height: 23px;
+  margin-right: 4px;
+}
+
 img.star {
-  max-width: 32px;
-  max-height: 32px;
+  max-width: 28px;
+  max-height: 28px;
 }
 img.resource-icons {
   max-width: 48px;

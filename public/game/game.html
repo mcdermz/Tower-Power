@@ -27,8 +27,9 @@
     </div>
 
     <div class="stars text-center m-3">
-      <p>Star rating:</p>
+      <p>STAR RATING</p>
         <img ng-repeat="star in $ctrl.stars track by $index" class="star" ng-src="{{$ctrl.hasStar(star)}}" alt="">
-
+      <hr>
+      <h6><span class="five-stars"><img class="pop-goal-img" src="../assets/group-48.png" alt=""><strong>{{$ctrl.fiveStars}}</strong> = YOU WIN</span></h6>
     </div>
 </div>

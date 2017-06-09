@@ -27,7 +27,7 @@
       gold: '../assets/star_gold.png',
       black: '../assets/star-32-black.png'
     }
-
+    vm.fiveStars = gameService.starLevels.slice(-1)[0]
     vm.stars = gameService.tower.stars
 
     vm.$onInit = function () {
