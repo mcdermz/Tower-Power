@@ -51,11 +51,20 @@ img#header-line {
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
+  padding: 5% 15%;
+  font-weight: 600;
+  font-size: 24px
 }
 
 .instructions-text{
   padding-top: 20px;
   padding-bottom: 10px;
+}
+
+ul.instructions-text {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 15%;
 }
 
 .new-game{
