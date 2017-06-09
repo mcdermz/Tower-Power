@@ -7,21 +7,30 @@
     </div>
     <div ng-show="$ctrl.rulesShow" class="instructions-dropdown scrollingDiv">
       <div class="instructions-content">
-      <h2 id="instructions-title">Welcome to Tower Power!</h2>
-      <p class="instructions-text">The objective of this game is to reach a five star rating for your tower. You gain stars by increacing your tower population and tower revenue. Each floor of your tower supports 12 spaces to add units.</p>
-      <p class="instructions-text">Tower Population increases by building residential units.One unit takes up 3 floor spaces, so plan ahead! Each unit costs $10 to build and increases population by 5 people. Be carful though, each residential unit costs money to maintain.</p>
-      <p>Tower Revenue increases by building commercial units. commercial units take up 4 spaces per floor. Each unit generates $1 in revenue per minute and costs $10 to build. Unlike residential units, commercial units to not have a maintenance fee.
-      </p>
-      <p class="instructions-text"> The star  system works as follows: You start with one star, an empty floor, no units, and small inheritance from your long lost twice removed late granny from Timbuktu. This small fortune happens to be just enough to start your tower empire.
-        To gain a second star rating for your tower you must reach 25 people. Each subsequent star is double the previous star. So, to reach 3 stars you need t oreach 50 people, to reach 4 you need 100 people, and to reach 5 stars you must reach 200
-        people.</p>
-      <p class="instructions-text">Simple right? Well, with each floor you add to your building the maintenance fee goes up:</p>
-      <ul>
-        <li>1 floor=$1/min</li>
-        <li>2 floors=$2/min</li>
-        <li>3 floors=$4/min</li>
-        <li>4 floors=$8/min</li>
-        <li>5 floors=$16/min</li>
-      </ul>
-    </div>
+        <h1 id="instructions-title">WELCOME TO TOWER POWER</h1>
+        <p class="instructions-text">The objective of this game is to reach a five star rating for your tower.</p>
+
+        <p>You are the proud owner of a no-star tower that consists merely of an empty floor with no units. However you have just received a small inheritance of ${{$ctrl.game.tower.funds}} from your long-lost, twice-removed, late cousin's granny all the way from Timbuktu. This small fortune happens to be just enough to start your tower empire! You have to find a way for your tower to reach 5 stars before you run out of money or you will lose the game. <strong>Build as fast as possible</strong> for a better score!</p>
+
+        <p class="instructions-text"> Each floor of your tower supports 6 spaces to add units. </p>
+
+        <p><strong>🏠 Residential Units increase population by {{$ctrl.game.res.population}} </strong> people and cost <strong>${{$ctrl.game.res.cost}} to build.</strong> Be careful though! Each residential unit also costs money to maintain and will deduct <strong>${{$ctrl.game.res.netRevenue}} every second.</strong></p>
+
+        <p><strong>💰 Commercial Units generate ${{$ctrl.game.com.netRevenue}}</strong> in revenue per second and cost <strong>${{$ctrl.game.com.cost}} to build</strong>. Unlike residential units, commercial units do not have a maintenance fee.
+        </p>
+
+        <p><strong>🌟 Gain Stars 🌟 by increasing your tower population.</strong></p>
+        <ul class="instructions-text">
+          <li>⭐️ : {{$ctrl.game.starLevels[0]}} 🏠</li>
+          <li>⭐️⭐️ : {{$ctrl.game.starLevels[1]}} 🏠</li>
+          <li>⭐️⭐️⭐️ : {{$ctrl.game.starLevels[2]}} 🏠</li>
+          <li>⭐️⭐️⭐️⭐️ : {{$ctrl.game.starLevels[3]}} 🏠</li>
+          <li>⭐️⭐️⭐️⭐️⭐️ : {{$ctrl.game.starLevels[4]}} 🏠</li>
+        </ul>
+        <p class="instructions-text">Simple right? Well, just remember you can't delete anything you build, so plan ahead.</p>
+
+        <p>Click <strong>NEW GAME</strong> to get started!</p>
+
+
+      </div>
     </div>

@@ -12,7 +12,7 @@
   controller.$inject = ['gameService']
   function controller (gameService) {
     const vm = this
-
+    vm.game = gameService
     vm.newGame = function(){
       gameService.isPlaying = !gameService.isPlaying
     }

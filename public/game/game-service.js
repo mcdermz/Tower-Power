@@ -7,6 +7,7 @@
       this.com = { name: 'com', cost: 150, netRevenue: 5, population: 0}
       this.res = { name: 'res', cost: 100, netRevenue: -10, population: 5}
       this.time = 0
+      this.starLevels = [5, 10, 15, 25, 35]
 
       this.tower = {
         floors: [
@@ -39,7 +40,7 @@
       }
 
       this.checkPopulation = function (pop) {
-        return ([35, 25, 15, 10, 5].indexOf(pop) !== -1)
+        return (this.starLevels.indexOf(pop) !== -1)
       }
 
       this.startTimer = function () {
