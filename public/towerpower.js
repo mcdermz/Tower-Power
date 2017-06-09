@@ -8,12 +8,11 @@
     templateUrl: './towerpower.html'
 
         })
-  controller.$inject = ['gameService', 'loginService', 'ngAnimate']
+  controller.$inject = ['gameService', 'loginService']
   function controller (gameService, loginService, ngAnimate) {
     const vm = this
     vm.game = gameService
     vm.login = loginService
-    vm.animate = ngAnimate
 
    }
 
