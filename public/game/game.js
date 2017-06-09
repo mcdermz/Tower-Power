@@ -54,7 +54,7 @@
     }
 
     vm.newFloor = function () {
-      if (vm.game.floors.length < 8 && vm.game.floors[0].length >= 4 && vm.game.funds >= vm.floorCost) {
+      if (vm.game.floors.length < 7 && vm.game.floors[0].length >= 4 && vm.game.funds >= vm.floorCost) {
         vm.game.floors.unshift([])
         vm.game.funds -= vm.floorCost
       }
