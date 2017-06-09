@@ -54,11 +54,11 @@
 }
 
 hr {
-    border: none;
-    height: 4px;
-    /* Set the hr color */
-    color: black; /* old IE */
-    background-color: black; /* Modern Browsers */
+  border: none;
+  height: 4px;
+  /* Set the hr color */
+  color: black; /* old IE */
+  background-color: black; /* Modern Browsers */
 }
 
 .unit-res, .unit-com{
