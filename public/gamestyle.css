@@ -32,12 +32,17 @@
 }
 
 .toolbar{
-  height: 85vh;
+  height: 80vh;
   width: 300px;
   background-color: rgba(255,255,255,0.5);
   border: 4px solid black;
   position: fixed;
   right: 0;
+}
+
+.resource-window {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .positive {
@@ -46,6 +51,14 @@
 
 .negative {
   color: red
+}
+
+hr {
+    border: none;
+    height: 4px;
+    /* Set the hr color */
+    color: black; /* old IE */
+    background-color: black; /* Modern Browsers */
 }
 
 .unit-res, .unit-com{
@@ -121,4 +134,11 @@ input[type=radio] {
 img.star {
   max-width: 32px;
   max-height: 32px;
+}
+img.resource-icons {
+  max-width: 48px;
+  max-height: 48px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 3px;
 }
