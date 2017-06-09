@@ -21,6 +21,8 @@
       <button id="add-floor" class="btn btn-primary" ng-click="$ctrl.newFloor()"> Add Floor ( {{$ctrl.floorCost}} )</button>
     </div>
     <div class="stars">
-      <p>Star rating: <img class="star" src="../assets/star_gold.png" alt=""><img class="star" src="../assets/star-32-black.png" alt=""><img class="star" src="../assets/star-32-black.png" alt=""><img class="star" src="../assets/star-32-black.png" alt=""><img class="star" src="../assets/star-32-black.png" alt=""></p>
+      <p>Star rating:
+        <img ng-repeat="star in $ctrl.stars track by $index" class="star" ng-src="{{$ctrl.hasStar($index)}}" alt="">
+      </p>
     </div>
 </div>

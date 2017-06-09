@@ -15,7 +15,8 @@
         towerResources: {
           netRevenue: 0,
           population: 0,
-        }
+        },
+        starRating: 1,
       }
 
       this.startTimer = function (i = 1) {
@@ -30,7 +31,8 @@
               towerResources: {
                 netRevenue: 0,
                 population: 0,
-              }
+              },
+              starRating: 1,
             }
             this.isPlaying = false
             window.alert('You Lose!')
