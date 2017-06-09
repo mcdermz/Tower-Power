@@ -11,7 +11,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: grey;
+  background-image: url("./assets/interior-background-room.png");
   width: 120vh;
   height: 90px;
   margin-right: 100px;
