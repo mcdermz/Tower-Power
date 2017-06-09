@@ -17,16 +17,16 @@
           'negative': $ctrl.game.towerResources.netRevenue < 0}"><strong>
           ({{$ctrl.game.towerResources.netRevenue}})</strong></span>
         </div>
-
     </div>
     <hr>
+
     <div class="add building">
       <button id="add-residential" class="btn btn-primary" ng-click="$ctrl.newUnit('res')"> Add Residential ( {{$ctrl.resCost}} )</button>
       <button id="add-commercial" ng-click="$ctrl.newUnit('com')" class="btn btn-primary">Add Commercial ( {{$ctrl.comCost}} )</button>
       <button id="add-floor" class="btn btn-primary" ng-click="$ctrl.newFloor()"> Add Floor ( {{$ctrl.floorCost}} )</button>
     </div>
     <div class="stars text-center m-3">
-      <p>Star rating:
+      <p>
         <img ng-repeat="star in $ctrl.stars track by $index" class="star" ng-src="{{$ctrl.hasStar(star)}}" alt="">
       </p>
     </div>

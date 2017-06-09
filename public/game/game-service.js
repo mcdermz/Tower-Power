@@ -17,7 +17,7 @@
           netRevenue: 0,
           population: 0,
         },
-        starRating: 1,
+        starRating: 0,
         stars: new Array(5).fill('black')
       }
 
@@ -31,7 +31,7 @@
             netRevenue: 0,
             population: 0,
           },
-          starRating: 1,
+          starRating: 0,
           stars: new Array(5).fill('black'),
         }
         window.alert(`You ${outcome}!!!! Your SCORE is: ${this.time}`)
@@ -39,18 +39,20 @@
       }
 
       this.checkPopulation = function (pop) {
-        return ([30, 20, 15, 10].indexOf(pop) !== -1)
+        return ([35, 25, 15, 10, 5].indexOf(pop) !== -1)
       }
 
       this.startTimer = function () {
         return $interval(() => {
-          this.tower.funds += this.tower.towerResources.netRevenue
           this.time += 1
+
           if (this.tower.funds < 0) {
             this.gameOver('lose')
-          } else if (this.tower.stars.slice(-1)[0] === 'gold'){
+          }
+          if (this.tower.stars.slice(-1)[0] === 'gold'){
             this.gameOver('WIN')
           }
+          this.tower.funds += this.tower.towerResources.netRevenue
         }, 1000);
       }
     }
