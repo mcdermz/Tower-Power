@@ -43,6 +43,10 @@ img#header-line {
   background-color: rgba(255,255,255,0.5);
 }
 
+.scrolling-div {
+  overflow: scroll;
+}
+
 #instructions-title {
   margin-top: 4%;
 }
