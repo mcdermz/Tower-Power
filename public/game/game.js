@@ -33,7 +33,11 @@
     vm.$onInit = function () {
       gameService.startTimer()
       vm.funds = gameService.tower.funds
-      vm.game.towerResources = (vm.game.floors.length === 1 && vm.game.floors[0].length < 1) ? { netRevenue: 0, population: 0 } : towerResources(vm.game.floors)
+      vm.game.towerResources =
+        (vm.game.floors.length === 1 &&
+          vm.game.floors[0].length < 1) ? 
+        { netRevenue: 0, population: 0 } : towerResources(vm.game.floors)
+
       vm.stars.unshift('gold')
       vm.stars.pop()
     }

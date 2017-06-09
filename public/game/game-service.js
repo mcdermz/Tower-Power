@@ -6,6 +6,7 @@
     function service($interval, $window) {
       this.com = { name: 'com', cost: 150, netRevenue: 5, population: 0}
       this.res = { name: 'res', cost: 100, netRevenue: -10, population: 5}
+      this.time = 0
 
       this.tower = {
         floors: [
@@ -33,8 +34,8 @@
           starRating: 1,
           stars: new Array(5).fill('black'),
         }
+        window.alert(`You ${outcome}!!!! Your SCORE is: ${this.time}`)
         this.isPlaying = false
-        window.alert(`You ${outcome}!!!!`)
       }
 
       this.checkPopulation = function (pop) {
@@ -53,9 +54,10 @@
         }
       }
 
-      this.startTimer = function (i = 1) {
+      this.startTimer = function () {
         return $interval(() => {
           this.tower.funds += this.tower.towerResources.netRevenue
+          this.time += 1
           if (this.tower.funds < 0) {
             this.gameOver('lose')
           }
