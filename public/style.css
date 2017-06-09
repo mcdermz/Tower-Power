@@ -164,7 +164,6 @@ ul.instructions-text {
   color: #EF3B3A;
 }
 
-
 body {
   background-image: url("https://s-media-cache-ak0.pinimg.com/originals/47/1a/08/471a08fc76dc51e61d8cc160a70f3448.jpg");
   background-repeat:no-repeat;
@@ -173,19 +172,4 @@ body {
   width: 100%;
   height: 100vh;
   background-size: 100% 100%;
-}
-
-#itstoobig {
-  height: 100px;
-  width:100px;
-}
-
-#clouds {
-  width: 1400px;
-  height: 300px;
-  margin-bottom: -600px;
-  margin-top: -200px;
-  position: relative;
-  overflow: inherit;
-  opacity: .7;
 }
