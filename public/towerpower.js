@@ -9,11 +9,11 @@
 
         })
   controller.$inject = ['gameService', 'loginService']
-  function controller (gameService, loginService, ngAnimate) {
+  function controller (gameService, loginService) {
     const vm = this
     vm.game = gameService
     vm.login = loginService
-
+    vm.checked = true;
    }
 
 })();

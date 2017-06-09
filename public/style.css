@@ -162,6 +162,17 @@ body {
   background-size: 100% 100%;
 }
 
-.scrollingDiv {
-   overflow:scroll;
+#itstoobig {
+  height: 100px;
+  width:100px;
+}
+
+#clouds {
+  width: 1400px;
+  height: 300px;
+  margin-bottom: -600px;
+  margin-top: -200px;
+  position: relative;
+  overflow: inherit;
+  opacity: .7;
 }
