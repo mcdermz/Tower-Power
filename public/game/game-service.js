@@ -39,19 +39,7 @@
       }
 
       this.checkPopulation = function (pop) {
-        switch (pop) {
-          case 30:
-            this.gameOver('win')
-            return true
-          case 20:
-            return true
-          case 15:
-            return true
-          case 10:
-            return true
-          default:
-            return false
-        }
+        return ([30, 20, 15, 10].indexOf(pop) !== -1)
       }
 
       this.startTimer = function () {
@@ -60,6 +48,8 @@
           this.time += 1
           if (this.tower.funds < 0) {
             this.gameOver('lose')
+          } else if (this.tower.stars.slice(-1)[0] === 'gold'){
+            this.gameOver('WIN')
           }
         }, 1000);
       }
