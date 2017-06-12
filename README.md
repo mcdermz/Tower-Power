@@ -19,15 +19,17 @@ Each floor of your tower supports 6 spaces to add units.
 🌟 Gain Stars 🌟 by increasing your tower population.
 
   ⭐️ : 5 🏠
+  
   ⭐️⭐️ : 15 🏠
+  
   ⭐️⭐️⭐️ : 25 🏠
+  
   ⭐️⭐️⭐️⭐️ : 35 🏠
+  
   ⭐️⭐️⭐️⭐️⭐️ : 50 🏠
 
 Simple right? Well, just remember you can't delete anything you build, so plan ahead.
 
 Click NEW GAME to get started!
 
-"https://files.slack.com/files-pri/T1T555TL0-F5RM9B2GM/screen_shot_2017-06-09_at_12.49.57_pm.png
 
-"https://files.slack.com/files-pri/T1T555TL0-F5QU8TYDN/screen_shot_2017-06-09_at_12.50.38_pm.png"
